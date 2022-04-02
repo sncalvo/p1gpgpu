@@ -7,8 +7,6 @@ project "Practico1"
   kind "ConsoleApp"
   language "C"
 
-  buildoptions { "-O3 -mtune=native -funroll-loops" }
-
   targetdir "bin/%{cfg.buildcfg}"
 
   files { "%{prj.name}/**.h", "%{prj.name}/**.c" }
@@ -20,3 +18,4 @@ project "Practico1"
   filter "configurations:Release"
     defines { "NDEBUG" }
     optimize "On"
+    buildoptions { "-O3 -mtune=native -funroll-loops" }
