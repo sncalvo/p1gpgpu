@@ -1,0 +1,76 @@
+[santiago.calvo.vello@pcunix48 p1gpgpu]$ ./bin/Release/Practico1 1152 16
+mult_bl_fila: 192.95 ms, 7.92 GFlops runs: 11
+
+[santiago.calvo.vello@pcunix48 p1gpgpu]$ ./bin/Release/Practico1 1152 18
+mult_bl_fila: 193.01 ms, 7.92 GFlops runs: 11
+
+[santiago.calvo.vello@pcunix48 p1gpgpu]$ ./bin/Release/Practico1 1152 32
+mult_bl_fila: 199.88 ms, 7.65 GFlops runs: 11
+
+mult_bl_fila
+
+16:
+mult_bl_fila: 120996.65 ms, 0.01 GFlops runs: 1
+==528296==
+==528296== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==528296== Collected : 1669924134 2012596392 442019487 1453 203131570 581302 1441 12111332 581271
+==528296==
+==528296== I   refs:      1,669,924,134
+==528296== I1  misses:            1,453
+==528296== LLi misses:            1,441
+==528296== I1  miss rate:          0.00%
+==528296== LLi miss rate:          0.00%
+==528296==
+==528296== D   refs:      2,454,615,879  (2,012,596,392 rd + 442,019,487 wr)
+==528296== D1  misses:      203,712,872  (  203,131,570 rd +     581,302 wr)
+==528296== LLd misses:       12,692,603  (   12,111,332 rd +     581,271 wr)
+==528296== D1  miss rate:           8.3% (         10.1%   +         0.1%  )
+==528296== LLd miss rate:           0.5% (          0.6%   +         0.1%  )
+==528296==
+==528296== LL refs:         203,714,325  (  203,133,023 rd +     581,302 wr)
+==528296== LL misses:        12,694,044  (   12,112,773 rd +     581,271 wr)
+==528296== LL miss rate:            0.3% (          0.3%   +         0.1%  )
+
+18:
+mult_bl_fila: 125554.73 ms, 0.01 GFlops runs: 1
+==239929==
+==239929== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==239929== Collected : 1669787267 2012542666 442004800 1452 201780914 581301 1440 10784229 581269
+==239929==
+==239929== I   refs:      1,669,787,267
+==239929== I1  misses:            1,452
+==239929== LLi misses:            1,440
+==239929== I1  miss rate:          0.00%
+==239929== LLi miss rate:          0.00%
+==239929==
+==239929== D   refs:      2,454,547,466  (2,012,542,666 rd + 442,004,800 wr)
+==239929== D1  misses:      202,362,215  (  201,780,914 rd +     581,301 wr)
+==239929== LLd misses:       11,365,498  (   10,784,229 rd +     581,269 wr)
+==239929== D1  miss rate:           8.2% (         10.0%   +         0.1%  )
+==239929== LLd miss rate:           0.5% (          0.5%   +         0.1%  )
+==239929==
+==239929== LL refs:         202,363,667  (  201,782,366 rd +     581,301 wr)
+==239929== LL misses:        11,366,938  (   10,785,669 rd +     581,269 wr)
+==239929== LL miss rate:            0.3% (          0.3%   +         0.1%  )
+
+32:
+mult_bl_fila: 118820.30 ms, 0.01 GFlops runs: 1
+==528310==
+==528310== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==528310== Collected : 1669332368 2012361663 441958427 1450 197118130 581302 1438 6139364 581271
+==528310==
+==528310== I   refs:      1,669,332,368
+==528310== I1  misses:            1,450
+==528310== LLi misses:            1,438
+==528310== I1  miss rate:          0.00%
+==528310== LLi miss rate:          0.00%
+==528310==
+==528310== D   refs:      2,454,320,090  (2,012,361,663 rd + 441,958,427 wr)
+==528310== D1  misses:      197,699,432  (  197,118,130 rd +     581,302 wr)
+==528310== LLd misses:        6,720,635  (    6,139,364 rd +     581,271 wr)
+==528310== D1  miss rate:           8.1% (          9.8%   +         0.1%  )
+==528310== LLd miss rate:           0.3% (          0.3%   +         0.1%  )
+==528310==
+==528310== LL refs:         197,700,882  (  197,119,580 rd +     581,302 wr)
+==528310== LL misses:         6,722,073  (    6,140,802 rd +     581,271 wr)
+==528310== LL miss rate:            0.2% (          0.2%   +         0.1%  )
