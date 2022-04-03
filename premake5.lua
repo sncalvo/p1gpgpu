@@ -18,4 +18,4 @@ project "Practico1"
   filter "configurations:Release"
     defines { "NDEBUG" }
     optimize "On"
-    buildoptions { "-O3 -mtune=native -funroll-loops" }
+    buildoptions { "-O3 -march=native -mtune=native -funroll-loops" }
