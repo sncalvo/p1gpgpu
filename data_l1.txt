@@ -1,0 +1,178 @@
+Bloques 16
+mult_simple: 0.03 ms, 1.79 GFlops runs: 76755
+mult_fila: 0.01 ms, 8.67 GFlops runs: 371656
+mult_bl_simple: 0.03 ms, 1.79 GFlops runs: 76702
+mult_bl_fila: 0.01 ms, 9.17 GFlops runs: 393043
+
+Bloques 32
+mult_simple: 0.03 ms, 1.79 GFlops runs: 76607
+mult_fila: 0.01 ms, 8.74 GFlops runs: 374698
+mult_bl_simple: 0.03 ms, 1.78 GFlops runs: 76310
+mult_bl_fila: 0.01 ms, 8.76 GFlops runs: 375637
+
+Bloques 64
+mult_simple: 0.03 ms, 1.79 GFlops runs: 76582
+mult_fila: 0.01 ms, 8.75 GFlops runs: 375045
+mult_bl_simple: 0.03 ms, 1.79 GFlops runs: 76875
+mult_bl_fila: 0.01 ms, 8.91 GFlops runs: 381814
+
+Corridas mult_simple con matrices de 36x36
+
+mult_simple: 4.89 ms, 0.01 GFlops runs: 409
+==417621==
+==417621== I   refs:      93,324,706
+==417621== I1  misses:         1,447
+==417621== LLi misses:         1,411
+==417621== I1  miss rate:       0.00%
+==417621== LLi miss rate:       0.00%
+==417621==
+==417621== D   refs:      45,750,523  (42,530,620 rd   + 3,219,903 wr)
+==417621== D1  misses:         5,439  (     3,397 rd   +     2,042 wr)
+==417621== LLd misses:         2,507  (     1,347 rd   +     1,160 wr)
+==417621== D1  miss rate:        0.0% (       0.0%     +       0.1%  )
+==417621== LLd miss rate:        0.0% (       0.0%     +       0.0%  )
+==417621==
+==417621== LL refs:            6,886  (     4,844 rd   +     2,042 wr)
+==417621== LL misses:          3,918  (     2,758 rd   +     1,160 wr)
+==417621== LL miss rate:         0.0% (       0.0%     +       0.0%  )
+
+Corridas mult_fila con matrices de 36x36
+
+mult_fila: 4.80 ms, 0.01 GFlops runs: 417
+==417727==
+==417727== I   refs:      45,538,371
+==417727== I1  misses:         1,454
+==417727== LLi misses:         1,417
+==417727== I1  miss rate:       0.00%
+==417727== LLi miss rate:       0.00%
+==417727==
+==417727== D   refs:      38,417,461  (31,392,937 rd   + 7,024,524 wr)
+==417727== D1  misses:         5,494  (     3,433 rd   +     2,061 wr)
+==417727== LLd misses:         2,507  (     1,347 rd   +     1,160 wr)
+==417727== D1  miss rate:        0.0% (       0.0%     +       0.0%  )
+==417727== LLd miss rate:        0.0% (       0.0%     +       0.0%  )
+==417727==
+==417727== LL refs:            6,948  (     4,887 rd   +     2,061 wr)
+==417727== LL misses:          3,924  (     2,764 rd   +     1,160 wr)
+==417727== LL miss rate:         0.0% (       0.0%     +       0.0%  )
+
+Corridas mult_bl_simple con matrices de 36x36 y bloques de 16, 32, 64 (se omite 128)
+
+mult_bl_simple: 4.82 ms, 0.01 GFlops runs: 415
+==417830==
+==417830== I   refs:      94,930,488
+==417830== I1  misses:         1,452
+==417830== LLi misses:         1,413
+==417830== I1  miss rate:       0.00%
+==417830== LLi miss rate:       0.00%
+==417830==
+==417830== D   refs:      46,481,526  (43,231,505 rd   + 3,250,021 wr)
+==417830== D1  misses:         5,045  (     2,991 rd   +     2,054 wr)
+==417830== LLd misses:         2,507  (     1,347 rd   +     1,160 wr)
+==417830== D1  miss rate:        0.0% (       0.0%     +       0.1%  )
+==417830== LLd miss rate:        0.0% (       0.0%     +       0.0%  )
+==417830==
+==417830== LL refs:            6,497  (     4,443 rd   +     2,054 wr)
+==417830== LL misses:          3,920  (     2,760 rd   +     1,160 wr)
+==417830== LL miss rate:         0.0% (       0.0%     +       0.0%  )
+
+mult_bl_simple: 4.84 ms, 0.01 GFlops runs: 414
+==417835==
+==417835== I   refs:      94,515,700
+==417835== I1  misses:         1,452
+==417835== LLi misses:         1,413
+==417835== I1  miss rate:       0.00%
+==417835== LLi miss rate:       0.00%
+==417835==
+==417835== D   refs:      46,316,471  (43,073,220 rd   + 3,243,251 wr)
+==417835== D1  misses:         4,643  (     2,591 rd   +     2,052 wr)
+==417835== LLd misses:         2,507  (     1,347 rd   +     1,160 wr)
+==417835== D1  miss rate:        0.0% (       0.0%     +       0.1%  )
+==417835== LLd miss rate:        0.0% (       0.0%     +       0.0%  )
+==417835==
+==417835== LL refs:            6,095  (     4,043 rd   +     2,052 wr)
+==417835== LL misses:          3,920  (     2,760 rd   +     1,160 wr)
+==417835== LL miss rate:         0.0% (       0.0%     +       0.0%  )
+
+mult_bl_simple: 4.85 ms, 0.01 GFlops runs: 413
+==417840==
+==417840== I   refs:      94,120,979
+==417840== I1  misses:         1,452
+==417840== LLi misses:         1,413
+==417840== I1  miss rate:       0.00%
+==417840== LLi miss rate:       0.00%
+==417840==
+==417840== D   refs:      46,160,012  (42,922,686 rd   + 3,237,326 wr)
+==417840== D1  misses:         5,463  (     3,413 rd   +     2,050 wr)
+==417840== LLd misses:         2,507  (     1,347 rd   +     1,160 wr)
+==417840== D1  miss rate:        0.0% (       0.0%     +       0.1%  )
+==417840== LLd miss rate:        0.0% (       0.0%     +       0.0%  )
+==417840==
+==417840== LL refs:            6,915  (     4,865 rd   +     2,050 wr)
+==417840== LL misses:          3,920  (     2,760 rd   +     1,160 wr)
+==417840== LL miss rate:         0.0% (       0.0%     +       0.0%  )
+
+Corridas mult_bl_fila con matrices de 36x36 y bloques de 16, 32, 64, 128
+
+mult_bl_fila: 4.07 ms, 0.01 GFlops runs: 492
+==249899==
+==249899== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==249899== Collected : 51588969 34606842 8520728 1447 3721 1240 1410 1340 1167
+==249899==
+==249899== I   refs:      51,588,969
+==249899== I1  misses:         1,447
+==249899== LLi misses:         1,410
+==249899== I1  miss rate:       0.00%
+==249899== LLi miss rate:       0.00%
+==249899==
+==249899== D   refs:      43,127,570  (34,606,842 rd + 8,520,728 wr)
+==249899== D1  misses:         4,961  (     3,721 rd +     1,240 wr)
+==249899== LLd misses:         2,507  (     1,340 rd +     1,167 wr)
+==249899== D1  miss rate:        0.0% (       0.0%   +       0.0%  )
+==249899== LLd miss rate:        0.0% (       0.0%   +       0.0%  )
+==249899==
+==249899== LL refs:            6,408  (     5,168 rd +     1,240 wr)
+==249899== LL misses:          3,917  (     2,750 rd +     1,167 wr)
+==249899== LL miss rate:         0.0% (       0.0%   +       0.0%  )
+
+mult_bl_fila: 4.23 ms, 0.01 GFlops runs: 473
+==418952==
+==418952== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==418952== Collected : 49913544 33333833 8264946 1441 4116 1235 1404 1340 1165
+==418952==
+==418952== I   refs:      49,913,544
+==418952== I1  misses:         1,441
+==418952== LLi misses:         1,404
+==418952== I1  miss rate:       0.00%
+==418952== LLi miss rate:       0.00%
+==418952==
+==418952== D   refs:      41,598,779  (33,333,833 rd + 8,264,946 wr)
+==418952== D1  misses:         5,351  (     4,116 rd +     1,235 wr)
+==418952== LLd misses:         2,505  (     1,340 rd +     1,165 wr)
+==418952== D1  miss rate:        0.0% (       0.0%   +       0.0%  )
+==418952== LLd miss rate:        0.0% (       0.0%   +       0.0%  )
+==418952==
+==418952== LL refs:            6,792  (     5,557 rd +     1,235 wr)
+==418952== LL misses:          3,909  (     2,744 rd +     1,165 wr)
+==418952== LL miss rate:         0.0% (       0.0%   +       0.0%  )
+
+mult_bl_fila: 3.90 ms, 0.01 GFlops runs: 513
+==197510==
+==197510== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==197510== Collected : 52577819 35681828 8707891 1441 3798 2259 1404 1340 1165
+==197510==
+==197510== I   refs:      52,577,819
+==197510== I1  misses:         1,441
+==197510== LLi misses:         1,404
+==197510== I1  miss rate:       0.00%
+==197510== LLi miss rate:       0.00%
+==197510==
+==197510== D   refs:      44,389,719  (35,681,828 rd + 8,707,891 wr)
+==197510== D1  misses:         6,057  (     3,798 rd +     2,259 wr)
+==197510== LLd misses:         2,505  (     1,340 rd +     1,165 wr)
+==197510== D1  miss rate:        0.0% (       0.0%   +       0.0%  )
+==197510== LLd miss rate:        0.0% (       0.0%   +       0.0%  )
+==197510==
+==197510== LL refs:            7,498  (     5,239 rd +     2,259 wr)
+==197510== LL misses:          3,909  (     2,744 rd +     1,165 wr)
+==197510== LL miss rate:         0.0% (       0.0%   +       0.0%  )

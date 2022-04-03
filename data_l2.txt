@@ -1,0 +1,199 @@
+Bloques 16
+mult_simple: 0.81 ms, 1.39 GFlops runs: 2477
+mult_fila: 0.12 ms, 9.31 GFlops runs: 16560
+mult_bl_simple: 0.80 ms, 1.40 GFlops runs: 2491
+mult_bl_fila: 0.11 ms, 10.17 GFlops runs: 18087
+
+Bloques 32
+mult_simple: 0.80 ms, 1.40 GFlops runs: 2487
+mult_fila: 0.12 ms, 9.39 GFlops runs: 16688
+mult_bl_simple: 0.80 ms, 1.40 GFlops runs: 2492
+mult_bl_fila: 0.11 ms, 10.08 GFlops runs: 17918
+
+Bloques 64
+mult_simple: 0.80 ms, 1.40 GFlops runs: 2486
+mult_fila: 0.12 ms, 9.40 GFlops runs: 16712
+mult_bl_simple: 0.80 ms, 1.41 GFlops runs: 2499
+mult_bl_fila: 0.12 ms, 9.69 GFlops runs: 17228
+
+Bloques 128
+mult_simple: 0.80 ms, 1.40 GFlops runs: 2486
+mult_fila: 0.12 ms, 9.40 GFlops runs: 16713
+mult_bl_simple: 0.80 ms, 1.40 GFlops runs: 2492
+mult_bl_fila: 0.12 ms, 9.64 GFlops runs: 17145
+
+Corridas mult_simple con matrices de 104x104 y bloques de 16, 32, 64 (se omite 128)
+
+mult_simple: 118.39 ms, 0.01 GFlops runs: 17
+==249957==
+==249957== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==249957== Collected : 88439400 43056206 3470899 1468 2416742 27097 1428 1340 5332
+==249957==
+==249957== I   refs:      88,439,400
+==249957== I1  misses:         1,468
+==249957== LLi misses:         1,428
+==249957== I1  miss rate:       0.00%
+==249957== LLi miss rate:       0.00%
+==249957==
+==249957== D   refs:      46,527,105  (43,056,206 rd + 3,470,899 wr)
+==249957== D1  misses:     2,443,839  ( 2,416,742 rd +    27,097 wr)
+==249957== LLd misses:         6,672  (     1,340 rd +     5,332 wr)
+==249957== D1  miss rate:        5.3% (       5.6%   +       0.8%  )
+==249957== LLd miss rate:        0.0% (       0.0%   +       0.2%  )
+==249957==
+==249957== LL refs:        2,445,307  ( 2,418,210 rd +    27,097 wr)
+==249957== LL misses:          8,100  (     2,768 rd +     5,332 wr)
+==249957== LL miss rate:         0.0% (       0.0%   +       0.2%  )
+
+Corridas mult_fila con matrices de 104x104
+
+mult_fila: 91.94 ms, 0.01 GFlops runs: 22
+==250049==
+==250049== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==250049== Collected : 45197439 36881784 9294621 1470 3124877 33869 1430 1340 5332
+==250049==
+==250049== I   refs:      45,197,439
+==250049== I1  misses:         1,470
+==250049== LLi misses:         1,430
+==250049== I1  miss rate:       0.00%
+==250049== LLi miss rate:       0.00%
+==250049==
+==250049== D   refs:      46,176,405  (36,881,784 rd + 9,294,621 wr)
+==250049== D1  misses:     3,158,746  ( 3,124,877 rd +    33,869 wr)
+==250049== LLd misses:         6,672  (     1,340 rd +     5,332 wr)
+==250049== D1  miss rate:        6.8% (       8.5%   +       0.4%  )
+==250049== LLd miss rate:        0.0% (       0.0%   +       0.1%  )
+==250049==
+==250049== LL refs:        3,160,216  ( 3,126,347 rd +    33,869 wr)
+==250049== LL misses:          8,102  (     2,770 rd +     5,332 wr)
+==250049== LL miss rate:         0.0% (       0.0%   +       0.1%  )
+
+Corridas mult_bl_simple con matrices de 104x104 y bloques de 16, 32, 64 (se omite 128)
+
+mult_bl_simple: 125.54 ms, 0.01 GFlops runs: 16
+==417865==
+==417865== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==417865== Collected : 84416320 40866426 3451700 1473 266427 25710 1431 1340 5332
+==417865==
+==417865== I   refs:      84,416,320
+==417865== I1  misses:         1,473
+==417865== LLi misses:         1,431
+==417865== I1  miss rate:       0.00%
+==417865== LLi miss rate:       0.00%
+==417865==
+==417865== D   refs:      44,318,126  (40,866,426 rd + 3,451,700 wr)
+==417865== D1  misses:       292,137  (   266,427 rd +    25,710 wr)
+==417865== LLd misses:         6,672  (     1,340 rd +     5,332 wr)
+==417865== D1  miss rate:        0.7% (       0.7%   +       0.7%  )
+==417865== LLd miss rate:        0.0% (       0.0%   +       0.2%  )
+==417865==
+==417865== LL refs:          293,610  (   267,900 rd +    25,710 wr)
+==417865== LL misses:          8,103  (     2,771 rd +     5,332 wr)
+==417865== LL miss rate:         0.0% (       0.0%   +       0.2%  )
+
+mult_bl_simple: 125.34 ms, 0.01 GFlops runs: 16
+==417876==
+==417876== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==417876== Collected : 84347942 40846979 3450352 1473 599148 25710 1431 1340 5332
+==417876==
+==417876== I   refs:      84,347,942
+==417876== I1  misses:         1,473
+==417876== LLi misses:         1,431
+==417876== I1  miss rate:       0.00%
+==417876== LLi miss rate:       0.00%
+==417876==
+==417876== D   refs:      44,297,331  (40,846,979 rd + 3,450,352 wr)
+==417876== D1  misses:       624,858  (   599,148 rd +    25,710 wr)
+==417876== LLd misses:         6,672  (     1,340 rd +     5,332 wr)
+==417876== D1  miss rate:        1.4% (       1.5%   +       0.7%  )
+==417876== LLd miss rate:        0.0% (       0.0%   +       0.2%  )
+==417876==
+==417876== LL refs:          626,331  (   600,621 rd +    25,710 wr)
+==417876== LL misses:          8,103  (     2,771 rd +     5,332 wr)
+==417876== LL miss rate:         0.0% (       0.0%   +       0.2%  )
+
+mult_bl_simple: 124.11 ms, 0.01 GFlops runs: 17
+==417881==
+==417881== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==417881== Collected : 88472707 43074892 3471442 1473 2104162 27062 1431 1340 5332
+==417881==
+==417881== I   refs:      88,472,707
+==417881== I1  misses:         1,473
+==417881== LLi misses:         1,431
+==417881== I1  miss rate:       0.00%
+==417881== LLi miss rate:       0.00%
+==417881==
+==417881== D   refs:      46,546,334  (43,074,892 rd + 3,471,442 wr)
+==417881== D1  misses:     2,131,224  ( 2,104,162 rd +    27,062 wr)
+==417881== LLd misses:         6,672  (     1,340 rd +     5,332 wr)
+==417881== D1  miss rate:        4.6% (       4.9%   +       0.8%  )
+==417881== LLd miss rate:        0.0% (       0.0%   +       0.2%  )
+==417881==
+==417881== LL refs:        2,132,697  ( 2,105,635 rd +    27,062 wr)
+==417881== LL misses:          8,103  (     2,771 rd +     5,332 wr)
+==417881== LL miss rate:         0.0% (       0.0%   +       0.2%  )
+
+Corridas mult_bl_fila con matrices de 104x104 y bloques de 16, 32, 64 (se omite 128)
+
+mult_bl_fila: 90.56 ms, 0.01 GFlops runs: 23
+==249885==
+==249885== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==249885== Collected : 46667162 37931725 9594380 1474 394758 35174 1433 1340 5332
+==249885==
+==249885== I   refs:      46,667,162
+==249885== I1  misses:         1,474
+==249885== LLi misses:         1,433
+==249885== I1  miss rate:       0.00%
+==249885== LLi miss rate:       0.00%
+==249885==
+==249885== D   refs:      47,526,105  (37,931,725 rd + 9,594,380 wr)
+==249885== D1  misses:       429,932  (   394,758 rd +    35,174 wr)
+==249885== LLd misses:         6,672  (     1,340 rd +     5,332 wr)
+==249885== D1  miss rate:        0.9% (       1.0%   +       0.4%  )
+==249885== LLd miss rate:        0.0% (       0.0%   +       0.1%  )
+==249885==
+==249885== LL refs:          431,406  (   396,232 rd +    35,174 wr)
+==249885== LL misses:          8,105  (     2,773 rd +     5,332 wr)
+==249885== LL miss rate:         0.0% (       0.0%   +       0.1%  )
+
+mult_bl_fila: 108.73 ms, 0.01 GFlops runs: 19
+==418938==
+==418938== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==418938== Collected : 41531632 32170553 8456202 1470 238016 29761 1429 1340 5330
+==418938==
+==418938== I   refs:      41,531,632
+==418938== I1  misses:         1,470
+==418938== LLi misses:         1,429
+==418938== I1  miss rate:       0.00%
+==418938== LLi miss rate:       0.00%
+==418938==
+==418938== D   refs:      40,626,755  (32,170,553 rd + 8,456,202 wr)
+==418938== D1  misses:       267,777  (   238,016 rd +    29,761 wr)
+==418938== LLd misses:         6,670  (     1,340 rd +     5,330 wr)
+==418938== D1  miss rate:        0.7% (       0.7%   +       0.4%  )
+==418938== LLd miss rate:        0.0% (       0.0%   +       0.1%  )
+==418938==
+==418938== LL refs:          269,247  (   239,486 rd +    29,761 wr)
+==418938== LL misses:          8,099  (     2,769 rd +     5,330 wr)
+==418938== LL miss rate:         0.0% (       0.0%   +       0.1%  )
+
+mult_bl_fila: 89.77 ms, 0.01 GFlops runs: 23
+==197500==
+==197500== Events    : Ir Dr Dw I1mr D1mr D1mw ILmr DLmr DLmw
+==197500== Collected : 46496367 37864218 9576787 1468 2730870 35192 1427 1340 5330
+==197500==
+==197500== I   refs:      46,496,367
+==197500== I1  misses:         1,468
+==197500== LLi misses:         1,427
+==197500== I1  miss rate:       0.00%
+==197500== LLi miss rate:       0.00%
+==197500==
+==197500== D   refs:      47,441,005  (37,864,218 rd + 9,576,787 wr)
+==197500== D1  misses:     2,766,062  ( 2,730,870 rd +    35,192 wr)
+==197500== LLd misses:         6,670  (     1,340 rd +     5,330 wr)
+==197500== D1  miss rate:        5.8% (       7.2%   +       0.4%  )
+==197500== LLd miss rate:        0.0% (       0.0%   +       0.1%  )
+==197500==
+==197500== LL refs:        2,767,530  ( 2,732,338 rd +    35,192 wr)
+==197500== LL misses:          8,097  (     2,767 rd +     5,330 wr)
+==197500== LL miss rate:         0.0% (       0.0%   +       0.1%  )
